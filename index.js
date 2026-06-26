@@ -11,14 +11,17 @@ let massEl = document.getElementById('mass')
 function conversion() {
     let val = inputEl.value; 
 
-    const feetToMeter = val * 3.281
-    const meterToFeet = val / 3.281
-
-    const gallonToLiter = val * 0.264
-    const literToGallon = val / 0.264
-
-    const poundToKilogram = val * 2.204
-    const kilogramToPound = val / 2.204
+    // Length
+    const meterToFeet = val * 3.281; 
+    const feetToMeter = val / 3.281; 
+    
+    // Volume
+    const literToGallon = val * 0.264; 
+    const gallonToLiter = val / 0.264; 
+    
+    // Mass
+    const kilogramToPound = val * 2.204; 
+    const poundToKilogram = val / 2.204;
 
     lengthEl.textContent = `${val} meters = ${meterToFeet.toFixed(3)} feet | ${val} feet = ${feetToMeter.toFixed(3)} meters`
     volumeEl.textContent = `${val} liters = ${literToGallon.toFixed(3)} gallons | ${val} gallons = ${gallonToLiter.toFixed(3)} liters`
